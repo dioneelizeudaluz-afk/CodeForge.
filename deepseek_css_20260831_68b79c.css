@@ -1,0 +1,128 @@
+.welcome-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: var(--bg-primary);
+  padding: 20px;
+}
+
+.welcome-content {
+  text-align: center;
+  max-width: 500px;
+}
+
+.welcome-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.welcome-logo-text {
+  color: var(--accent);
+  letter-spacing: 2px;
+}
+
+.welcome-logo-bracket {
+  color: var(--text-muted);
+  font-weight: normal;
+}
+
+.welcome-content h1 {
+  font-size: 28px;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+
+.welcome-content p {
+  font-size: 16px;
+  color: var(--text-secondary);
+  margin-bottom: 32px;
+}
+
+.welcome-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.welcome-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.2s;
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+}
+
+.welcome-btn:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.welcome-btn.primary {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+.welcome-btn.primary:hover {
+  background: var(--accent-hover);
+}
+
+.welcome-features {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.feature-item span:first-child {
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  .welcome-logo {
+    font-size: 24px;
+  }
+  
+  .welcome-content h1 {
+    font-size: 22px;
+  }
+  
+  .welcome-content p {
+    font-size: 14px;
+  }
+  
+  .welcome-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  
+  .welcome-features {
+    gap: 20px;
+  }
+  
+  .feature-item {
+    font-size: 12px;
+  }
+}
