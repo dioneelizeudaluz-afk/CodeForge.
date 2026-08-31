@@ -1,0 +1,16 @@
+.code-editor {
+  flex: 1;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.code-editor .monaco-editor {
+  height: 100% !important;
+}
+
+@media (max-width: 768px) {
+  .code-editor {
+    font-size: 14px;
+  }
+}
