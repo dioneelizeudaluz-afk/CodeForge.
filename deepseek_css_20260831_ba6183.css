@@ -1,0 +1,153 @@
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+  min-height: 48px;
+  position: relative;
+  z-index: 100;
+}
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.topbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: bold;
+  font-size: 16px;
+  color: var(--accent);
+}
+
+.logo-text {
+  letter-spacing: 1px;
+}
+
+.logo-bracket {
+  color: var(--text-muted);
+  font-weight: normal;
+}
+
+.topbar-project {
+  font-size: 13px;
+  color: var(--text-secondary);
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.topbar-center {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.topbar-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  background: transparent;
+  color: var(--text-secondary);
+  border-radius: 4px;
+  font-size: 13px;
+  transition: all 0.2s;
+}
+
+.topbar-btn:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.topbar-btn.primary {
+  background: var(--accent);
+  color: white;
+}
+
+.topbar-btn.primary:hover {
+  background: var(--accent-hover);
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 0 0 8px 8px;
+  padding: 8px;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.mobile-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  background: transparent;
+  color: var(--text-secondary);
+  border-radius: 4px;
+  font-size: 14px;
+  transition: all 0.2s;
+  width: 100%;
+  text-align: left;
+}
+
+.mobile-menu-item:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.desktop-only {
+  display: flex;
+}
+
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+  
+  .mobile-only {
+    display: flex;
+  }
+  
+  .topbar {
+    padding: 8px 12px;
+  }
+  
+  .topbar-project {
+    max-width: 100px;
+    font-size: 12px;
+  }
+  
+  .topbar-btn span {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-menu {
+    display: none !important;
+  }
+}
